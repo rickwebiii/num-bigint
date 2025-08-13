@@ -8,7 +8,7 @@ categories = [ "algorithms", "data-structures", "science" ]
 license = "MIT OR Apache-2.0"
 name = "num-bigint"
 repository = "https://github.com/rust-num/num-bigint"
-version = "0.4.6"
+version = "0.5.0"
 readme = "README.md"
 exclude = ["/ci/*", "/.github/*"]
 edition = "2021"
@@ -50,7 +50,7 @@ default-features = false
 features = ["i128"]
 
 [dependencies.num-traits]
-version = "0.2.18"
+version = "0.3.0"
 default-features = false
 features = ["i128"]
 
@@ -73,3 +73,7 @@ default-features = false
 optional = true
 version = "1"
 default-features = false
+
+[patch.crates-io]
+num-traits = { git = "https://github.com/rickwebiii/num-traits.git", branch = "rweber/wrapping" }
+num-integer = { git = "https://github.com/rickwebiii/num-integer.git", branch = "rweber/wrapping" }
